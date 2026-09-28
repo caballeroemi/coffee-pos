@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f1ec;
+  color: #252525;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+button {
+  font-family: inherit;
+}
+
+.pos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+}
+
+.menu,
+.order {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.menu-header {
+  margin-bottom: 30px;
+}
+
+.menu-header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.menu-header p {
+  color: #777;
+}
+
+.coffee-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.coffee-button {
+  min-height: 110px;
+  border: 1px solid #dedede;
+  background: #fafafa;
+  border-radius: 14px;
+  cursor: pointer;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.coffee-button span {
+  font-weight: bold;
+}
+
+.coffee-button small {
+  color: #777;
+  font-size: 14px;
+}
+
+.coffee-button:hover {
+  transform: translateY(-3px);
+  border-color: #75553b;
+  background: #f7f1eb;
+}
+
+.coffee-button:active {
+  transform: scale(0.97);
+}
+
+.order-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.order-header h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.order-header p {
+  color: #777;
+}
+
+.selected-drink {
+  background: #f7f3ee;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.selected-drink span {
+  font-size: 13px;
+  color: #777;
+}
+
+#selected-coffee {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.option-section {
+  margin-bottom: 25px;
+}
+
+.option-section h3 {
+  margin-bottom: 12px;
+}
+
+.option-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.size-button,
+.milk-button,
+.syrup-button {
+  border: 1px solid #d8d8d8;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.size-button:hover,
+.milk-button:hover,
+.syrup-button:hover {
+  background: #eee7df;
+  border-color: #75553b;
+}
+
+.size-button:active,
+.milk-button:active,
+.syrup-button:active {
+  transform: scale(0.96);
+}
+
+.selection {
+  margin-top: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+.selection span {
+  color: #252525;
+  font-weight: bold;
+}
+
+.drink-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 10px;
+}
+
+.drink-total span {
+  font-weight: bold;
+}
+
+#total-price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#add-order-button {
+  width: 100%;
+  border: none;
+  background: #33271f;
+  color: white;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.2s;
+}
+
+#add-order-button:hover {
+  opacity: 0.9;
+}
+
+#add-order-button:active {
+  transform: scale(0.98);
+}
+
+.current-order {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 20px;
+}
+
+.current-order h3 {
+  margin-bottom: 15px;
+}
+
+#order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#order-list p {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 12px;
+  line-height: 1.5;
+}
+
+#order-list button {
+  border: none;
+  background: #e8e8e8;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#order-list button:hover {
+  background: #d5d5d5;
+}
+
+.order-total {
+  border-top: 2px solid #252525;
+  margin-top: 25px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#order-total {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#order-total::before {
+  content: "$";
+}
+
+@media (max-width: 850px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .pos-container {
+    grid-template-columns: 1fr;
+  }
+
+  .coffee-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .menu,
+  .order {
+    padding: 20px;
+  }
+
+  .coffee-buttons {
+    grid-template-columns: 1fr;
+  }
+}

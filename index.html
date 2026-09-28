@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee POS</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main class="pos-container">
+
+    <section class="menu">
+
+      <div class="menu-header">
+        <h1>Coffee Menu</h1>
+        <p>Choose your drink</p>
+      </div>
+
+      <div class="coffee-buttons">
+
+        <button class="coffee-button" data-price="5.50">
+          <span>Flat White</span>
+          <small>$5.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="5.50">
+          <span>Latte</span>
+          <small>$5.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="5.50">
+          <span>Cappuccino</span>
+          <small>$5.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="6.50">
+          <span>Mocha</span>
+          <small>$6.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="5.50">
+          <span>Long Black</span>
+          <small>$5.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="4.00">
+          <span>Espresso</span>
+          <small>$4.00</small>
+        </button>
+
+        <button class="coffee-button" data-price="5.50">
+          <span>Americano</span>
+          <small>$5.50</small>
+        </button>
+
+        <button class="coffee-button" data-price="1.00">
+          <span>Extra Shot</span>
+          <small>$1.00</small>
+        </button>
+
+        <button class="coffee-button" data-price="5.00">
+          <span>Chai Latte</span>
+          <small>$5.00</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="order">
+
+      <div class="order-header">
+        <h2>New Order</h2>
+        <p>Customise your drink</p>
+      </div>
+
+      <div class="selected-drink">
+        <span>Selected coffee</span>
+        <p id="selected-coffee">None</p>
+      </div>
+
+
+      <div class="option-section">
+
+        <h3>Size</h3>
+
+        <div class="option-buttons">
+          <button
+            class="size-button"
+            data-price-change="-0.50">
+            Small
+          </button>
+
+          <button
+            class="size-button"
+            data-price-change="0">
+            Medium
+          </button>
+
+          <button
+            class="size-button"
+            data-price-change="0.50">
+            Large
+          </button>
+        </div>
+
+        <p class="selection">
+          Size:
+          <span id="selected-size">None</span>
+        </p>
+
+      </div>
+
+
+      <div class="option-section">
+
+        <h3>Milk</h3>
+
+        <div class="option-buttons">
+
+          <button
+            class="milk-button"
+            data-price="0">
+            Regular
+          </button>
+
+          <button
+            class="milk-button"
+            data-price="1">
+            Oat
+          </button>
+
+          <button
+            class="milk-button"
+            data-price="1">
+            Almond
+          </button>
+
+          <button
+            class="milk-button"
+            data-price="1">
+            Soy
+          </button>
+
+          <button
+            class="milk-button"
+            data-price="1">
+            Coconut
+          </button>
+
+        </div>
+
+        <p class="selection">
+          Milk:
+          <span id="selected-milk">None</span>
+        </p>
+
+      </div>
+
+
+      <div class="option-section">
+         <h3>Syrup</h3>
+         <div class="option-buttons">
+
+          <button
+            class="syrup-button"
+            data-price="1">
+            Vanilla
+          </button>
+
+          <button
+            class="syrup-button"
+            data-price="1">
+            Caramel
+          </button>
+
+          <button
+            class="syrup-button"
+            data-price="1">
+            Hazelnut
+          </button>
+
+        </div>
+
+        <p class="selection">
+          Syrup:
+          <span id="selected-syrup">None</span>
+        </p>
+
+      </div>
+
+
+      <div class="drink-total">
+          <span>Drink Price</span>
+          <p id="total-price">
+          $0.00
+        </p>
+
+      </div>
+
+
+      <button id="add-order-button">
+        Add to Order
+      </button>
+
+
+      <div class="current-order">
+         <h3>Current Order</h3>
+         <div id="order-list"></div>
+
+      </div>
+
+
+      <div class="order-total">
+         <span>Total</span>
+         <p id="order-total">
+          0
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
